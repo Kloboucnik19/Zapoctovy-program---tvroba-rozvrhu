@@ -39,7 +39,7 @@ Při každém novém spuštění se soubor rozvrh_vysledek přepíše na aktualn
 # Technický popis
 Program je napsán v Pythonu a je strukturován do několika částí:
 
-Načítání dat (funkce read_data)
+Načítání dat (funkce load_data)
 Zajišťuje zpracování excelového souboru rozvrh_skola.xlsx. Z jednotlivých listů vytvoří odpovídající Python datové struktury (slovníky, seznamy, datové rámce). Díky tomu se vstupní data převedou do podoby vhodné pro optimalizační model.
 
 Model (funkce build_model)
