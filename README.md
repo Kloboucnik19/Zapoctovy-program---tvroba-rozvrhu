@@ -64,5 +64,5 @@ respektují se časové dostupnosti učitelů (sloty + priority).
 Řešení (funkce solve_model)
 Používá knihovny pulp a highspy pro nalezení optimálního rozvrhu. Minimalizuje penalizace za nevyhovující sloty a snaží se přiblížit preferovaným časovým rozvrhům. Pokud řešení neexistuje, program tuto skutečnost oznámí.
 
-Výstup (funkce write_solution)
+Výstup: 
 Výsledný rozvrh se uloží do konzole, aby uživatel viděl přehled při běhu programu a do excelového souboru rozvrh_vysledek.xlsx, kde má každá třída svůj list se sestaveným rozvrhem.
