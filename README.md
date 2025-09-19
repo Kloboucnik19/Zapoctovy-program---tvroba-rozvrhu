@@ -45,24 +45,27 @@ Zajišťuje zpracování excelového souboru rozvrh_skola.xlsx. Z jednotlivých 
 Model (funkce build_model)
 
 Vytváří matematický model rozvrhu jako úlohu lineárního programování, kde čveřici učitel–předmět–třída–slot–učebna přiřadí 1, nebo 0 v závislosti na tom, jestli daný učitel učí daný předmět v daný čas v dané učebně, nebo nikoliv. Při hledání řešení máme některá tvrdá omezení, jako např.
+
 učitel nemůže učit dvě hodiny najednou,
+
 učitel může učit jen předměty ze svých kompetencí,
 
 dodržuje se úvazek učitele,
 
 jednotlivé předměty musí být odučeny podle kurikula,
 
-každá třída má v daném čase právě jednu hodinu,
+každá třída má v daném čase právě nejvýše hodinu,
 
-respektují se kapacity a dostupnost učeben,
+respektuje se dostupnost učeben,
 
-a také měkká omezení, která určují prioritizovaný výsledek.
+a také měkká omezení, která určují prioritizovaný výsledek:
 
-respektují se časové dostupnosti učitelů (sloty + priority).
+Respektují se časové dostupnosti učitelů (sloty + priority).
 
 
 Řešení (funkce solve_model)
 Používá knihovny pulp a highspy pro nalezení optimálního rozvrhu. Minimalizuje penalizace za nevyhovující sloty a snaží se přiblížit preferovaným časovým rozvrhům. Pokud řešení neexistuje, program tuto skutečnost oznámí.
-
-Výstup: 
+Tvorba rozvrhu samotného (funkce extract_schedule)
+vybere příslušné kombinace učitel–předmět–třída–slot–učebna, tedy ty označené 1 a vytvoří čitelný rozvrh.
+Výstup (hlavní spouštěč): 
 Výsledný rozvrh se uloží do konzole, aby uživatel viděl přehled při běhu programu a do excelového souboru rozvrh_vysledek.xlsx, kde má každá třída svůj list se sestaveným rozvrhem.
