@@ -43,14 +43,21 @@ Načítání dat (funkce load_data)
 Zajišťuje zpracování excelového souboru rozvrh_skola.xlsx. Z jednotlivých listů vytvoří odpovídající Python datové struktury (slovníky, seznamy, datové rámce). Díky tomu se vstupní data převedou do podoby vhodné pro optimalizační model.
 
 Model (funkce build_model)
+
 Vytváří matematický model rozvrhu jako úlohu lineárního programování, kde čveřici učitel–předmět–třída–slot–učebna přiřadí 1, nebo 0 v závislosti na tom, jestli daný učitel učí daný předmět v daný čas v dané učebně, nebo nikoliv. Při hledání řešení máme některá tvrdá omezení, jako např.
 učitel nemůže učit dvě hodiny najednou,
 učitel může učit jen předměty ze svých kompetencí,
+
 dodržuje se úvazek učitele,
+
 jednotlivé předměty musí být odučeny podle kurikula,
+
 každá třída má v daném čase právě jednu hodinu,
+
 respektují se kapacity a dostupnost učeben,
+
 a také měkká omezení, která určují prioritizovaný výsledek.
+
 respektují se časové dostupnosti učitelů (sloty + priority).
 
 
