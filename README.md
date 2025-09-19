@@ -28,26 +28,11 @@ Stažený soubor rozvrh_skola.xlsx může člověk přepsat podle vlastních po�
                         obsah: informace, zda je učitel v daný čas dostupný a s jakou prioritou.
 Program vrátí jednak excelovou tabulku s rozvrhy pro jednotlivé třídy na oddělených listech, čili např. list pojemenovaný 2.A obsahuje rozvrh pro třídu 2.A. 
 a jednak řešení do konzole, to vypadá např. takto:
+<img width="1711" height="310" alt="image" src="https://github.com/user-attachments/assets/90d32e12-61ff-4247-b6c4-061d11ef2853" />
 
-Rozvrh pro 2.A:
-Hodina                        1                     2                        3                         4                        5                      6
-Den
-Po      Tělesná výchova (Hrubá)    Matematika (Novák)       Matematika (Novák)       Český jazyk (Novák)                        -     Angličtina (Beneš)
-Út           Matematika (Novák)   Vlastivěda (Dvořák)                        -        Matematika (Novák)      Český jazyk (Kovář)        Prvouka (Novák)
-St                            -   Vlastivěda (Dvořák)     Český jazyk (Dvořák)  Tělesná výchova (Veselý)      Český jazyk (Kovář)    Prvouka (Svobodová)
-Čt          Matematika (Dvořák)  Český jazyk (Dvořák)       Vlastivěda (Kovář)                         -      Angličtina (Veselý)  Přírodověda (Novotná)
-Pá                            -  Angličtina (Novotná)  Český jazyk (Svobodová)     Přírodověda (Novotná)  Český jazyk (Svobodová)    Angličtina (Veselý)
-
-Uživatel může v programu v sekci model, proměnné, omezení a cíl hned na začátku měnit požadavky na minimální počet dní s výukou a omezení na
-maximální počet hodin za den.
-def build_model(data: dict,
-                pokuta_nedoplnene: int = 5000,     
-                pokuta_priorita2: int = 1000,       
-                pokuta_nerovnomernost: int = 1000,  
-                min_dni_s_vyukou: int = 5,         
-                rozdil_hodin_den: int = 2,         
-                max_hodin_den: int = 6)
-Při každém novém spuštění se soubor rozvrh_vysledek přepíše na aktualní výsledek, a objeví se ve stejné složce jako jsou solve_rozvrh a rozvrh_skola.
+Uživatel může v programu v sekci model, proměnné, omezení a cíl ve funkci built_model požadavky na minimální počet dní s výukou a omezení na
+maximální počet hodin za den (min_dni_s_vyukou: int = 5 & max_hodin_den: int = 6)
+Při každém novém spuštění se soubor rozvrh_vysledek přepíše na aktualní výsledek, a objeví se ve stejné složce jako jsou solve_rozvrh a rozvrh_skola. Samotný soubor rozvrh_skola se ale nemění.
   
 
 
